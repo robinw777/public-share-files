@@ -1,0 +1,21 @@
+[user]
+  name = Zubin Wang
+  email = (hidden)
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)<%an>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[color]
+  ui = auto
+[core]
+  pager = less -FMRiX
+[push]
+  default = simple
+[commit]
+  template = ~/.gittemplate
