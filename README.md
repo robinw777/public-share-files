@@ -1,4 +1,3 @@
-public-share-files
-==================
+# public-share-files
 
-some files that can just share
+Some files that can just share, e.g. setup environments.
