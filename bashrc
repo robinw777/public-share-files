@@ -1,3 +1,4 @@
+# use 'brew' version of vim
 alias vim='/usr/local/bin/vim'
 
 alias ..='cd ..'
@@ -10,7 +11,7 @@ alias ls='ls -Fh'
 alias ll='ls -l'
 
 alias tn='tmux new -s'
-alias ta='tmux attatch -t'
+alias ta='tmux attach -t'
 
 # use vi mode in commandline
 set -o vi
@@ -22,14 +23,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # customize prompt
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:$HOME/bin"
-
 export EDITOR=vim
 
-# Setup docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/zubinw/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+# Setup brew token
+# https://github.com/settings/tokens/new?scopes=&description=Homebrew
+#export HOMEBREW_GITHUB_API_TOKEN=xxxxxx
 
