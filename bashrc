@@ -1,17 +1,13 @@
-# use 'brew' version of vim
-alias vim='/usr/local/bin/vim'
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
-
-alias ls='ls -Fh'
-alias ll='ls -l'
-
-alias tn='tmux new -s'
-alias ta='tmux attach -t'
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # use vi mode in commandline
 set -o vi
@@ -28,4 +24,9 @@ export EDITOR=vim
 # Setup brew token
 # https://github.com/settings/tokens/new?scopes=&description=Homebrew
 #export HOMEBREW_GITHUB_API_TOKEN=xxxxxx
+
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
